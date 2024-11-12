@@ -20,7 +20,7 @@ class DatabaseServiceImpl : DatabaseService {
         val entity = GenEntityUtil.execute(tableInfo, genIn)
 
         // 构建数据层
-        val repository = GenRepositoryUtil.execute(genIn)
+        val repository = GenRepositoryUtil.execute(genIn, entity)
 
         return GenerateResultOut(
             entity = entity,
